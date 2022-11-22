@@ -4,20 +4,23 @@ const db = require('../db/db.js');
 
 const {
   getUsers,
+  getUsersAndContacts,
   // getUserById,
   createUser,
   deleteUserById,
 } = require("../models/usersModel.js");
 
 router.get("/", async function (req, res) {
-  if (req.query.name !== undefined) {
-    const searchedUsers = await searchUserByName(req.query.name);
-    return res.json({ success: true, payload: searchedUsers });
-  }
-
   const users = await getUsers();
   res.json({ success: true, payload: users });
 });
+
+
+router.get("/", async function (req, res) {
+  const users = await getUsersAndContacts();
+  res.json({ success: true, payload: users });
+});
+
 
 // router.get("/:id", async function (req, res) {
 //   const user = await getUserById(req.params.id);
