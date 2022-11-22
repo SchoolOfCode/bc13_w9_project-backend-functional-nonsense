@@ -6,7 +6,7 @@ async function getContacts() {
 }
 
 async function createNewContact() {
-    const createContact = await query ('INSERT INTO contacts (twitter, linked_in, facebook, slack, email) VALUES ($1, $2, $3, $4, $5)' [user[0]] [user[1]] [user[2]] [user[3]] [user[4]]);
+    const createContact = await query ('INSERT INTO contacts (name, twitter, linked_in, facebook, slack, email) VALUES ($1, $2, $3, $4, $5, $6)' [user[0]] [user[1]] [user[2]] [user[3]] [user[4]] [user[5]]);
     const newContact = createContact.rows[0];
     return newContact;
 }

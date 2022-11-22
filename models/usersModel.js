@@ -5,17 +5,6 @@ async function getUsers() {
   const result = await query("SELECT * FROM users");
   return result.rows;
 }
-
-<<<<<<< HEAD
-// Get contacts
-async function getContacts() {
-   const retrieveContacts = await query ("SELECT * FROM contacts");
-   return retrieveAuthors.rows;
-}
-
-module.exports = {
-    getContacts,
-=======
 // async function getUserById(id) {
 //   // Query the database and return the user with a matching id
 //   const result = await query('SELECT * FROM users WHERE id = $1', [id]);
@@ -49,5 +38,4 @@ module.exports = {
   // getUserById,
   createUser,
   deleteUserById,
->>>>>>> 389f35b828b18447da2da322de42b7397abc4241
 };
