@@ -2,11 +2,12 @@ const express = require("express");
 const morgan = require("morgan");
 const contactsRouter = require("./routes/contactsRouter.js");
 const usersRouter = require("./routes/usersRouter.js");
+const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT;
 
-
+app.use(cors("*"));
 app.use(morgan("dev"));
 app.use(express.static("public"));
 app.use(express.json());
