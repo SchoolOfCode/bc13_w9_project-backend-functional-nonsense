@@ -18,6 +18,7 @@ async function getUsersAndContacts() {
   return result.rows;
 }
 
+
 async function createUser(user) {
   // Query the database to create an user and return the newly created user
   const result = await query('INSERT INTO users (learning_style, mb_personality, religion, cultural_background, gender_id, sexuality, hobby) VALUES ($1, $2, $3, $4, $5, $6, $7)' [user[0]] [user[1]] [user[2]] [user[3]] [user[4]] [user[5]] [user[6]]);
