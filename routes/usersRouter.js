@@ -5,10 +5,10 @@ const db = require('../db/db.js');
 
 const {
   getUsers,
-  getUsersAndContacts,
+  // getUsersAndContacts,
   // getUserById,
   createUser,
-  deleteUserById,
+  // deleteUserById,
 } = require("../models/usersModel.js");
 
 router.get("/", async function (req, res) {
@@ -17,10 +17,10 @@ router.get("/", async function (req, res) {
 });
 
 
-router.get("/", async function (req, res) {
-  const users = await getUsersAndContacts();
-  res.json({ success: true, payload: users });
-});
+// router.get("/", async function (req, res) {
+//   const users = await getUsersAndContacts();
+//   res.json({ success: true, payload: users });
+// });
 
 
 // router.get("/:id", async function (req, res) {
@@ -34,9 +34,9 @@ router.post("/", async function (req, res) {
   res.json({ success: true, payload: newUser });
 });
 
-router.delete("/:id", async function (req, res) {
-  const deletedUser = await deleteUserById(req.params.id);
-  res.json({ success: true, payload: deletedUser });
-});
+// router.delete("/:id", async function (req, res) {
+//   const deletedUser = await deleteUserById(req.params.id);
+//   res.json({ success: true, payload: deletedUser });
+// });
 
 module.exports = router;
