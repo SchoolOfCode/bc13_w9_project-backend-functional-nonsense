@@ -12,8 +12,8 @@ app.use(morgan("dev"));
 app.use(express.static("public"));
 app.use(express.json());
 
-app.use("/api/contacts", contactsRouter);
-app.use("/api/users", usersRouter);
+app.use("/contacts", contactsRouter);
+app.use("/users", usersRouter);
 
 app.listen(PORT, function () {
   console.log(`Server listening on port ${PORT}`);
