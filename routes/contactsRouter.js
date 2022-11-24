@@ -11,8 +11,8 @@ const {
 // Get route handler for contact by ID
 // && allContacts if no id is provided
 router.get("/", async function (req, res) {
-    const contacts = await getContacts();
-    res.json({ success: true, payload: contacts });
+        const contacts = await getContacts();
+        res.json({ success: true, payload: contacts});
 });
 
 // Create Contacts
