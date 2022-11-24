@@ -29,8 +29,8 @@ router.get("/", async function (req, res) {
 // });
 
 router.post("/", async function (req, res) {
-  const data = req.body;
-  const newUser = await createUser(data);
+  const user = req.body;
+  const newUser = await createUser(user);
   res.json({ success: true, payload: newUser });
 });
 
