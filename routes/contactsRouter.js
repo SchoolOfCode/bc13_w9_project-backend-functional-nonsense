@@ -5,7 +5,7 @@ const db = require('../db/db.js');
 const {
  getContacts,
  createNewContact
-} = require("./contactsModel.js");
+} = require("../models/contactsModel.js");
 
 
 // Get route handler for contact by ID
