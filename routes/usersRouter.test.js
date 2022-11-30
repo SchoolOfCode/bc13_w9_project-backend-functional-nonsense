@@ -1,6 +1,7 @@
 import app from '../app.js';
 import supertest from 'supertest';
 
+// GET/users jest unit test for make sure the correct values are being returned from getting the users from the database
 test ("GET /users", async function () {
     const response = await supertest(app).get("/users");
     expect(response.status).toBe(200);
