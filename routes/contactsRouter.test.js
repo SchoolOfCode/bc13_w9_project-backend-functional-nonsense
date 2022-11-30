@@ -2,6 +2,8 @@ import supertest from "supertest";
 import app from "../app.js";
 import { test, expect } from "@jest/globals";
 
+
+/** Jest test to make sure the getUsers request returns the correct data type and the response status is 200*/
 test("GET /users", async function () {
   const response = await supertest(app).get("/users");
   expect(response.status).toBe(200);

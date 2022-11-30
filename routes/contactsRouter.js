@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require('../db/db.js');
 
+// Importing all of the contacts model functions
 const {
  getContacts,
  createNewContact
@@ -15,7 +16,7 @@ router.get("/", async function (req, res) {
         res.json({ success: true, payload: contacts});
 });
 
-// Create Contacts
+// Post router to create the new contact data
 router.post("/", async function (req, res) {
     const data = req.body;
     const newContact = await createNewContact(data);
