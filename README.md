@@ -1,5 +1,3 @@
-# bc13_w9_project-backend-functional-nonsense
-
 ## The Bootcamper Support Network:
 
 A full-stack website that uses ProgreSQL databases to create a space for bootcampers around the world to link up. Input your data and find others with similar interests, background, etc to connect with. Designed to fulfil the brief given to us as part of the School of Code's Project Week during Bootcamp 13 (21st to 25th November 2022), built in three and a half days' of programming on the back of one day of planning. 
