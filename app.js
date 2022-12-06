@@ -3,11 +3,13 @@ const morgan = require("morgan");
 const contactsRouter = require("./routes/contactsRouter.js");
 const usersRouter = require("./routes/usersRouter.js");
 const cors = require("cors");
+const compression = require('compression')
 
 const app = express();
 const PORT = process.env.PORT;
 
 app.use(cors("*"));
+app.use(compression);
 app.use(morgan("dev"));
 app.use(express.static("public"));
 app.use(express.json());
